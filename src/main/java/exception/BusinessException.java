@@ -1,4 +1,4 @@
-package expetion;
+package exception;
 
 public class BusinessException extends Exception {
 

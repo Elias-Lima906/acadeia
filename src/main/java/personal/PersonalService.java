@@ -1,7 +1,7 @@
 package personal;
 
 import aluno.Aluno;
-import expetion.BusinessException;
+import exception.BusinessException;
 
 import java.util.ArrayList;
 import java.util.List;

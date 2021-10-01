@@ -1,6 +1,6 @@
 package aluno;
 
-import expetion.BusinessException;
+import exception.BusinessException;
 
 import java.util.ArrayList;
 import java.util.List;

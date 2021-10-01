@@ -1,6 +1,6 @@
 import Academia.AcademiaService;
 import aluno.Aluno;
-import expetion.BusinessException;
+import exception.BusinessException;
 import personal.PersonalTrainer;
 
 import java.util.Scanner;

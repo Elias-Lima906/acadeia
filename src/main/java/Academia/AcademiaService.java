@@ -2,7 +2,7 @@ package Academia;
 
 import aluno.Aluno;
 import aluno.AlunoService;
-import expetion.BusinessException;
+import exception.BusinessException;
 import personal.PersonalService;
 import personal.PersonalTrainer;
 
