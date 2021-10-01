@@ -1,9 +1,8 @@
 package personal;
 
-import entity.AgendamentoAula;
-import entity.Aula;
-import entity.Pessoa;
+import common.Pessoa;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,26 +10,17 @@ import java.util.stream.IntStream;
 
 public class PersonalTrainer extends Pessoa {
 
-    private Long id;
+    private final Long id;
 
-    private List<AgendamentoAula> agendamentos;
+    private final List<AgendamentoAula> agendamentos = new ArrayList<>();
 
-    private List<Integer> horariosDisponiveis = IntStream.range(8, 18).boxed().collect(Collectors.toList());
+    private final List<Integer> horariosDisponiveis = IntStream.range(8, 18).boxed().collect(Collectors.toList());
 
-    private List<Aula> aulasAptas = Arrays.asList(Aula.MUSCULACAO, Aula.LUTA);
+    private final List<Aula> aulasAptas = Arrays.asList(Aula.MUSCULACAO, Aula.LUTA, Aula.NATACAO);
 
     public PersonalTrainer(Long id, String nome, String cpf) {
         super(nome, cpf);
         this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "PersonalTrainer{"
-                + " id: " + id
-                + " nome: " + super.getNome()
-                + " cpf: " + super.getCpf()
-                + "}";
     }
 
     public Long getId() {
@@ -38,7 +28,6 @@ public class PersonalTrainer extends Pessoa {
     }
 
     public List<AgendamentoAula> getAgendamentos() {
-
         return agendamentos;
     }
 
@@ -49,4 +38,14 @@ public class PersonalTrainer extends Pessoa {
     public List<Aula> getAulasAptas() {
         return aulasAptas;
     }
+
+    @Override
+    public String toString() {
+        return "--------------" + "\n"
+                + "Identificação: " + id + "\n"
+                + " nome: " + super.getNome() + "\n"
+                + "--------------";
+    }
+
+
 }
